@@ -1,0 +1,153 @@
+#  AI-Driven Cab Booking Automation for Routematic
+
+## 📌 Problem Statement
+
+In many colleges and corporate campuses, students and employees depend on **Routematic** for daily cab transportation. The booking system has strict constraints:
+
+- Cab for **tomorrow must be booked before 12:00 AM today**
+- Booking is done manually through a **multi-step mobile app flow**
+- If a user forgets to book on time, **no cab is assigned**
+- On holidays or blocked days, booking is not allowed
+- There is **no reminder or auto-booking feature**
+
+This creates a **real, recurring problem** faced by many students and working professionals.
+
+---
+
+## 🎯 Why This Is a Real-World Problem
+
+Students and interns often:
+- Return late from classes, labs, or projects
+- Manage academic work along with internships
+- Miss the narrow booking window unintentionally
+
+Missing a booking results in:
+- Last-minute expensive transport
+- Stress and inconvenience
+- Punctuality and attendance issues
+
+This is not an edge case — **it happens daily to many users**.
+
+---
+
+## ❌ Why Existing Solutions Are Insufficient
+
+- Routematic does **not provide any auto-booking option**
+- There is **no public API** to integrate with
+- Manual booking requires:
+  - Navigating the calendar
+  - Identifying the next working day
+  - Filling multiple dropdowns
+  - Saving within a strict time window
+- Simple reminders are unreliable because the user still needs to perform every step correctly before midnight
+
+---
+
+## 🤖 How AI Helps Solve This Problem
+
+We designed an **AI-driven, context-aware automation agent** that behaves like a **responsible human user** rather than a simple script.
+
+### The AI Does NOT:
+- Reverse engineer the application
+- Use private or unauthorized APIs
+- Bypass business rules
+- Book outside allowed time windows
+
+### The AI DOES:
+- Observe the app’s UI in real time
+- Understand which screen is currently visible
+- Make decisions based on UI state
+- Verify every action before proceeding
+- Respect booking rules, holidays, and constraints
+
+---
+
+## 🧠 Why This Is AI and Not a Script
+
+This solution is **not a blind click bot**.
+
+It uses **state-based reasoning** and **context awareness**, similar to how a human interacts with the app:
+
+- Detects current screen (Home, Calendar, Form)
+- Identifies valid working days
+- Skips weekends and holidays
+- Reads current field values before changing them
+- Verifies that selections were applied successfully
+- Retries intelligently if an action fails
+- Exits gracefully when booking is not allowed
+
+The system is implemented as a **finite state machine**, where each state:
+- Observes UI context
+- Decides the next action
+- Confirms success before transitioning
+
+---
+
+## 🛠️ Technical Approach
+
+### Core Design
+- Android **Accessibility Service**
+- **Finite State Machine** based automation
+- Event-driven UI detection (no fixed delays)
+- Read-after-write verification
+- Fail-safe retries and timeouts
+
+### Key Capabilities
+- Launches Routematic reliably
+- Navigates to the calendar automatically
+- Identifies the **next valid working day**
+- Skips weekends and holidays
+- Fills booking details only when needed
+- Confirms booking success visually
+- Stops safely when booking is not permitted
+
+---
+
+## ⏰ Scheduling & Safety
+
+- Runs automatically before midnight
+- Respects Routematic’s booking window
+- Does not attempt booking on holidays
+- Requires minimal user interaction (notification-based launch)
+
+---
+
+## 🌍 Real-World Impact
+
+This project addresses a **daily operational pain point**:
+
+- Prevents missed cab bookings
+- Reduces stress and mental load
+- Saves money on last-minute transport
+- Improves punctuality and reliability
+
+It demonstrates how **AI automation can improve everyday life**, not just serve as a theoretical demo.
+
+---
+
+## 🧠 Key Learnings & Innovation
+
+- AI can operate **within strict system constraints**
+- Accessibility can be used **ethically and responsibly**
+- State-based reasoning significantly improves reliability
+- Real-world automation requires verification, not assumptions
+
+---
+
+## 🏁 Summary
+
+We built an **AI-driven, context-aware automation system** to solve a **real, recurring transportation problem** faced by students and professionals.
+
+Instead of bypassing systems, the AI agent is designed to:
+- Observe
+- Decide
+- Act
+- Verify
+- Fail safely
+
+This makes the solution **robust, ethical, and genuinely useful in real-world scenarios**.
+
+
+> ⚠️ This project is intended for personal, educational, and internal use only.
+> It operates strictly via the official app UI and respects all booking rules.
+> The author is not affiliated with Routematic.
